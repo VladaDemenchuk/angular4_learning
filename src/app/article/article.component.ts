@@ -8,7 +8,7 @@ import { Article } from './article.model';
 })
 export class ArticleComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'row';
-  article: Article;
+  @Input() article: Article;
 
   constructor() {
     this.article = new Article('Angular 2', 'http://angular.io', 10);
