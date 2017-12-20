@@ -6,10 +6,16 @@ import { Article } from './article/article.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   articles: Article[];
+  a: string = "5";
 
   constructor() {
+
+    var a = ['a','d','a','a'];
+    a.forEach( line => {console.log(line.toUpperCase())});
+    var lastName = "Murray";
     this.articles = [
       new Article('Angular 2', 'http://angular.io', 3),
       new Article('Fullstack', 'http://fullstack.io', 2),
@@ -27,6 +33,7 @@ export class AppComponent {
 
 
   sortedArticles(): Article[] {
-     return this.articles.sort((a: Article, b: Article) => b.votes - a.votes); }
+    return this.articles.sort((a: Article, b: Article) => b.votes - a.votes);
+  }
 
 }
